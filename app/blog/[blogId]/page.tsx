@@ -1,6 +1,5 @@
 import BlogDetailPage from "@/app/components/Blog/BlogDetailPage";
 import { getSingleBlogPost } from "@/app/lib/api";
-import { Metadata, ResolvingMetadata } from "next";
 
 type Props = {
   params: { blogId: string };
