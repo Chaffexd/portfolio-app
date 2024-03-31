@@ -10,6 +10,10 @@ const BlogPosts = async () => {
         // @ts-expect-error
         post={posts.items[0]}
       />
+      <Post
+        // @ts-expect-error
+        post={posts.items[1]}
+      />
     </div>
   );
 };

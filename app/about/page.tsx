@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Intro from "../components/About/Intro";
 import { SocialIcon } from "react-social-icons";
-import Link from "next/link";
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'Shane Chaffe - About',
+  description: 'About me, have a read!',
+}
 
 const AboutPage = () => {
   return (

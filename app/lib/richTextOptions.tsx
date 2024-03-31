@@ -7,22 +7,22 @@ import Link from "next/link";
 export const richTextOptions = {
   renderNode: {
     [BLOCKS.HEADING_1]: (node: any, children: any) => {
-      return <h1 className="font-bold text-3xl">{children}</h1>;
+      return <h1 className="font-bold text-5xl mb-4">{children}</h1>;
     },
     [BLOCKS.HEADING_2]: (node: any, children: any) => {
-      return <h2 className="font-bold text-2xl">{children}</h2>;
+      return <h2 className="font-bold text-2xl mb-4">{children}</h2>;
     },
     [BLOCKS.HEADING_3]: (node: any, children: any) => {
-      return <h3 className="font-bold text-xl">{children}</h3>;
+      return <h3 className="font-bold text-xl mb-4">{children}</h3>;
     },
     [BLOCKS.HEADING_4]: (node: any, children: any) => {
-      return <h4 className="font-bold text-lg">{children}</h4>;
+      return <h4 className="font-bold text-lg mb-4">{children}</h4>;
     },
     [BLOCKS.HEADING_5]: (node: any, children: any) => {
-      return <h5 className="font-bold text-lg">{children}</h5>;
+      return <h5 className="font-bold text-lg mb-4">{children}</h5>;
     },
     [BLOCKS.HEADING_6]: (node: any, children: any) => {
-      return <h6 className="font-bold text-lg">{children}</h6>;
+      return <h6 className="font-bold text-lg mb-4">{children}</h6>;
     },
     [BLOCKS.UL_LIST]: (node: any, children: any) => {
       return <ul className="list-disc">{children}</ul>;
@@ -44,14 +44,13 @@ export const richTextOptions = {
       );
     },
     [BLOCKS.EMBEDDED_ASSET]: (node: any, children: any) => {
-      console.log(node.data.target.fields.file.url);
       return (
         <Image
           src={`https:${node.data.target.fields.file.url}`}
           alt={node.data.target.fields.title}
-          width={300}
-          height={300}
-          className="lg:w-1/4 my-4 rounded-lg"
+          width={500}
+          height={500}
+          className="sm:w-1/4 md:w-2/4 lg:w-3/4 my-4 rounded-lg"
         />
       );
     },
@@ -69,11 +68,10 @@ export const richTextOptions = {
     },
     [BLOCKS.EMBEDDED_ENTRY]: (node: any, children: any) => {
       // node.data.fields holds description, language, code
-      // console.log(node.data.target.fields.code);
-      const { code, language } = node.data.target.fields;
+      const { codeSnippet, language } = node.data.target.fields;
       return (
         <SyntaxHighlighter style={vscDarkPlus} language={language}>
-          {code}
+          {codeSnippet}
         </SyntaxHighlighter>
       );
     },

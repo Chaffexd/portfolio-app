@@ -1,20 +1,33 @@
 import Image from "next/image";
 
-const Author = ({ author }) => {
-  console.log("AUTHOR = ", author);
+type AuthorProps = {
+  author: {
+    fields: {
+      name: string;
+      image: {
+        fields: {
+          file: {
+            url: string;
+          };
+        };
+      };
+    };
+  };
+};
 
+const Author = ({ author }: AuthorProps) => {
   const { name, image } = author.fields;
-  console.log("image", image);
+
   return (
-    <div className="flex">
+    <div className="flex items-center mb-8">
       <Image
         src={`https:${image.fields.file.url}`}
         alt="A photo of Shane"
         height={200}
         width={200}
-        className="rounded-full h-28 w-28"
+        className="rounded-full h-20 w-20 bg-center bg-cover mr-4"
       />
-      <p className="text-2xl">{name}</p>
+      <p className="text-2xl text-slate-600">{name}</p>
     </div>
   );
 };

@@ -1,4 +1,20 @@
 import BlogDetailPage from "@/app/components/Blog/BlogDetailPage";
+import { getSingleBlogPost } from "@/app/lib/api";
+import { Metadata, ResolvingMetadata } from "next";
+
+type Props = {
+  params: { blogId: string };
+};
+
+export async function generateMetadata({ params }: Props) {
+  const blogId = params.blogId;
+  const blogPost = await getSingleBlogPost(blogId);
+
+  return {
+    title: blogPost[0].fields.title,
+    description: blogPost[0].fields.content,
+  };
+}
 
 const PostDetailPage = ({ params }: { params: { blogId: string } }) => {
   const { blogId } = params;
