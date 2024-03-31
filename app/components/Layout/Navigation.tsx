@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeSwitch from "../ThemeSwitch";
 
 const Navigation = () => {
   return (
@@ -35,7 +36,9 @@ const Navigation = () => {
           </div>
         </div>
         <div>
-          <p>Switcher</p>
+          <button className="hover:bg-slate-200 hover:dark:bg-slate-700 rounded-full p-2">
+            <ThemeSwitch />
+          </button>
         </div>
       </nav>
     </header>

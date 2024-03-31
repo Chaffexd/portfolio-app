@@ -14,7 +14,7 @@ type ProjectProps = {
 
 const Project = ({ projectData }: ProjectProps) => {
   return (
-    <article className="rounded bg-slate-200 p-8 h-fit flex flex-col lg:flex-row gap-8 items-center">
+    <article className="rounded bg-slate-200 p-8 h-fit flex flex-col lg:flex-row gap-8 items-center dark:bg-zinc-800">
       <Image
         src={projectData.imageSource}
         alt={projectData.title}

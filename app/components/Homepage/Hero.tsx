@@ -7,7 +7,7 @@ import BlogPosts from "../Blog/BlogPosts";
 const Hero = () => {
   return (
     <section className="">
-      <div className="max-sm:w-full max-sm:mx-2 max-w-3xl mt-16 ml-48">
+      <div className="max-sm:w-full max-sm:mx-2 max-w-3xl mt-16 ml-48 md:pr-36">
         <Link href={"/"} className="block w-1/6 mb-4" aria-label="Home">
           <Image
             className="rounded-full object-cover h-16 w-16"
