@@ -35,10 +35,9 @@ type PostProps = {
 };
 
 const Post = ({ post }: PostProps) => {
-  const formattedDate = formatDate(post?.fields.dateOfEntry);
-  const pageSlug = post?.fields.slug;
-
-  console.log("POST == ", post);
+  const formattedDate = formatDate(post?.fields?.dateOfEntry);
+  const pageSlug = post?.fields?.slug;
+  
   return (
     <article className="relative flex flex-col items-start hover:bg-zinc-50 rounded-lg p-8 dark:hover:bg-zinc-700">
       <time className="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-white pl-3.5">
@@ -48,9 +47,9 @@ const Post = ({ post }: PostProps) => {
         {formattedDate}
       </time>
       <h2 className="text-base font-semibold text-zinc-800 dark:text-white">
-        {post?.fields.title}
+        {post?.fields?.title}
       </h2>
-      <Link href={`/articles/${pageSlug}`}>
+      <Link href={`/blog/${pageSlug}`}>
         <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
         <span className="relative z-10"></span>
       </Link>

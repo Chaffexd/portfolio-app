@@ -19,11 +19,11 @@ const Navigation = () => {
               About
             </Link>
             <Link
-              href={"/articles"}
+              href={"/blog"}
               className="hover:text-teal-500"
               aria-label="Articles"
             >
-              Articles
+              Blog
             </Link>
             <Link
               href={"/projects"}

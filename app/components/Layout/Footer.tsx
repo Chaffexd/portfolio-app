@@ -12,11 +12,11 @@ const Footer = () => {
           About
         </Link>
         <Link
-          href={"/articles"}
+          href={"/blog"}
           className="mr-8 hover:text-teal-500"
           aria-label="Articles"
         >
-          Articles
+          Blog
         </Link>
         <Link
           href={"/projects"}

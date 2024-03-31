@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Intro from "../components/About/Intro";
+import { SocialIcon } from "react-social-icons";
+import Link from "next/link";
 
 const AboutPage = () => {
   return (
@@ -17,7 +19,11 @@ const AboutPage = () => {
               />
             </div>
             <Intro />
-            <div className="lg:pl-16"></div>
+            <div className="lg:pl-24 flex gap-4">
+              <SocialIcon url="https://github.com/Chaffexd" target="_blank" />
+              <SocialIcon url="https://www.linkedin.com/in/shane-chaffe/" target="_blank" />
+              <SocialIcon url="https://www.frontendmentor.io/profile/Chaffexd" target="_blank" />
+            </div>
           </div>
         </div>
       </div>

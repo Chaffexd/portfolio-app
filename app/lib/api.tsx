@@ -18,6 +18,15 @@ export const getAllPosts = async () => {
   return posts;
 };
 
+export const getSingleBlogPost = async (slug: string) => {
+  const post = await client.getEntries({
+    content_type: "blogPost",
+    "fields.slug[match]": slug,
+  });
+
+  return post.items;
+};
+
 export function formatDate(ogPostDate: string) {
   const date = new Date(ogPostDate);
   const month = date.toLocaleString("en-US", { month: "long" });
