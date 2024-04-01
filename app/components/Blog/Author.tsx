@@ -27,7 +27,7 @@ const Author = ({ author }: AuthorProps) => {
         width={200}
         className="rounded-full h-20 w-20 bg-center bg-cover mr-4"
       />
-      <p className="text-xl text-slate-600">{name}</p>
+      <p className="text-xl text-slate-600 dark:text-slate-200">{name}</p>
     </div>
   );
 };

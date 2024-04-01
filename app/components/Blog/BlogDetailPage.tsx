@@ -22,9 +22,9 @@ const BlogDetailPage = async ({ slug }: SlugProps) => {
         // @ts-expect-error
         author={author}
       />
-      <time className="mb-2 block text-zinc-400">{date}</time>
+      <time className="mb-2 block text-zinc-400 dark:text-slate-200">{date}</time>
       <Link href={"/blog"}>
-        <ArrowLeftIcon className="h-6 w-6 text-slate-600 mb-8" />
+        <ArrowLeftIcon className="h-6 w-6 text-slate-600 mb-8 dark:text-slate-200" />
       </Link>
       {content &&
         // @ts-expect-error: ignore because it attempts to infer

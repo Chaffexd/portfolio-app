@@ -7,25 +7,25 @@ import Link from "next/link";
 export const richTextOptions = {
   renderNode: {
     [BLOCKS.HEADING_1]: (node: any, children: any) => {
-      return <h1 className="font-bold text-5xl mb-4">{children}</h1>;
+      return <h1 className="font-bold text-5xl mb-4 dark:text-white">{children}</h1>;
     },
     [BLOCKS.HEADING_2]: (node: any, children: any) => {
-      return <h2 className="font-bold text-2xl mb-4">{children}</h2>;
+      return <h2 className="font-bold text-2xl mb-4 dark:text-white">{children}</h2>;
     },
     [BLOCKS.HEADING_3]: (node: any, children: any) => {
-      return <h3 className="font-bold text-xl mb-4">{children}</h3>;
+      return <h3 className="font-bold text-xl mb-4 dark:text-white">{children}</h3>;
     },
     [BLOCKS.HEADING_4]: (node: any, children: any) => {
-      return <h4 className="font-bold text-lg mb-4">{children}</h4>;
+      return <h4 className="font-bold text-lg mb-4 dark:text-white">{children}</h4>;
     },
     [BLOCKS.HEADING_5]: (node: any, children: any) => {
-      return <h5 className="font-bold text-lg mb-4">{children}</h5>;
+      return <h5 className="font-bold text-lg mb-4 dark:text-white">{children}</h5>;
     },
     [BLOCKS.HEADING_6]: (node: any, children: any) => {
-      return <h6 className="font-bold text-lg mb-4">{children}</h6>;
+      return <h6 className="font-bold text-lg mb-4 dark:text-white">{children}</h6>;
     },
     [BLOCKS.UL_LIST]: (node: any, children: any) => {
-      return <ul className="list-disc">{children}</ul>;
+      return <ul className="list-disc dark:text-slate-200">{children}</ul>;
     },
     [BLOCKS.LIST_ITEM]: (node: any, children: any) => {
       return <li className="my-4">{children}</li>;
@@ -34,7 +34,7 @@ export const richTextOptions = {
       return <li className="my-4">{children}</li>;
     },
     [BLOCKS.PARAGRAPH]: (node: any, children: any) => {
-      return <p className="mb-2 text-slate-700">{children}</p>;
+      return <p className="mb-2 text-slate-700 dark:text-slate-200">{children}</p>;
     },
     [BLOCKS.TABLE]: (node: any, children: any) => {
       return (
