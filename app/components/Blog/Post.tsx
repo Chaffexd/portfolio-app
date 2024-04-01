@@ -49,7 +49,7 @@ const Post = ({ post }: PostProps) => {
       <h2 className="text-base font-semibold text-zinc-800 dark:text-white">
         {post?.fields?.title}
       </h2>
-      <Link href={`/blog/${pageSlug}`}>
+      <Link href={`/blog/${pageSlug}`} aria-label="article">
         <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
         <span className="relative z-10"></span>
       </Link>
