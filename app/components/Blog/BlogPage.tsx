@@ -12,7 +12,7 @@ const BlogPage = async () => {
           <header className="max-w-2xl">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               Here is where I dabble in writing my thoughts, I reflect, and I
-              review what I've been up to...
+              review what I&apos;ve been up to...
             </h1>
           </header>
           <div className="mt-16 sm:mt-20">

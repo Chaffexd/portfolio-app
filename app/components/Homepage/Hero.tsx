@@ -21,7 +21,7 @@ const Hero = () => {
           Software Developer, Frontend Engineer, and Poodle enthusiast...
         </h1>
         <p className="mt-6 text-zinc-600 text-base dark:text-zinc-400">
-          I'm Shane, a Senior Technical Account Manager and developer based in
+          I&apos;m Shane, a Senior Technical Account Manager and developer based in
           London, UK. I enjoy fixing things that are broken and creating from
           scratch.
         </p>
