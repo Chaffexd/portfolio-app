@@ -6,7 +6,7 @@ const Navigation = () => {
     <header className="max-sm:mx-0 flex justify-center md:mx-48">
       <nav className="flex mt-6 items-center justify-between min-w-full dark:text-white">
         <div>
-          <Link href={"/"} className="hover:text-teal-500">
+          <Link href={"/"} className="hover:text-teal-500" aria-label="Home">
             Home
           </Link>
         </div>
@@ -36,7 +36,10 @@ const Navigation = () => {
           </div>
         </div>
         <div>
-          <button className="hover:bg-slate-200 hover:dark:bg-slate-700 rounded-full p-2">
+          <button
+            className="hover:bg-slate-200 hover:dark:bg-slate-700 rounded-full p-2"
+            aria-label="toggle"
+          >
             <ThemeSwitch />
           </button>
         </div>
