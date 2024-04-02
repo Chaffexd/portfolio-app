@@ -50,7 +50,7 @@ export const richTextOptions = {
           alt={node.data.target.fields.title}
           width={500}
           height={500}
-          className="sm:w-1/4 md:w-2/4 lg:w-3/4 my-4 rounded-lg"
+          className="sm:w-1/4 md:w-2/4 lg:w-3/4 my-12 rounded-lg shadow-lg"
         />
       );
     },
@@ -70,7 +70,7 @@ export const richTextOptions = {
       // node.data.fields holds description, language, code
       const { codeSnippet, language } = node.data.target.fields;
       return (
-        <SyntaxHighlighter style={vscDarkPlus} language={language}>
+        <SyntaxHighlighter style={vscDarkPlus} language={language} customStyle={{ marginTop: "20px", marginBottom: "20px" }}>
           {codeSnippet}
         </SyntaxHighlighter>
       );
