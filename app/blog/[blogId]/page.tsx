@@ -10,8 +10,16 @@ export async function generateMetadata({ params }: Props) {
   const blogPost = await getSingleBlogPost(blogId);
 
   return {
-    title: blogPost[0].fields.title,
-    description: blogPost[0].fields.content,
+    // @ts-expect-error
+    title: blogPost[0].fields.seoMetadata.fields.titleTag,
+    // @ts-expect-error
+    description: blogPost[0].fields.seoMetadata.fields.description,
+    // @ts-expect-error
+    keywords: blogPost[0].fields.seoMetadata.fields.keywords,
+    // @ts-expect-error
+    creator: blogPost[0].fields.seoMetadata.fields.author,
+    // @ts-expect-error
+    publisher: blogPost[0].fields.seoMetadata.fields.author,
   };
 }
 
