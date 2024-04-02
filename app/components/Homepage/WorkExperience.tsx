@@ -3,7 +3,7 @@ import WorkItem from "./WorkItem";
 
 const WorkExperience = () => {
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6 xl:mr-24 md:mr-20">
+    <div className="rounded-2xl border border-zinc-100 p-6 xl:mr-24 md:mr-20 h-fit">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <Work />
         <span className="ml-3">Work</span>
