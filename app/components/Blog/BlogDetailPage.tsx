@@ -4,6 +4,8 @@ import { richTextOptions } from "@/app/lib/richTextOptions";
 import Author from "./Author";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
+import { readingTime } from "reading-time-estimator";
 
 type SlugProps = {
   slug: string;
@@ -11,9 +13,13 @@ type SlugProps = {
 
 const BlogDetailPage = async ({ slug }: SlugProps) => {
   const blogPost = await getSingleBlogPost(slug);
-
   const { content, author, tags, dateOfEntry } = blogPost[0].fields;
 
+  // @ts-expect-error
+  const text = documentToPlainTextString(content);
+  const timeToRead = readingTime(text);
+
+  // convert date to readable format I want
   const date = formatDate(dateOfEntry as string);
 
   return (
@@ -21,6 +27,7 @@ const BlogDetailPage = async ({ slug }: SlugProps) => {
       <Author
         // @ts-expect-error
         author={author}
+        timeToRead={timeToRead}
       />
       <Link href={"/blog"}>
         <ArrowLeftIcon className="h-6 w-6 text-slate-600 mb-4 dark:text-slate-200" />

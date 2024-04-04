@@ -1,5 +1,7 @@
 import { formatDate } from "@/app/lib/api";
 import Link from "next/link";
+import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
+import { readingTime } from "reading-time-estimator";
 
 type PostProps = {
   post: {
@@ -37,7 +39,12 @@ type PostProps = {
 const Post = ({ post }: PostProps) => {
   const formattedDate = formatDate(post?.fields?.dateOfEntry);
   const pageSlug = post?.fields?.slug;
-  
+  const { content } = post.fields; 
+  // convert rich text to plain string, then it can be read
+  // @ts-expect-error
+  const text = documentToPlainTextString(content);
+  const timeToRead = readingTime(text);
+
   return (
     <article className="relative flex flex-col items-start hover:bg-zinc-50 rounded-lg p-8 dark:hover:bg-zinc-700">
       <time className="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-white pl-3.5">
@@ -45,6 +52,7 @@ const Post = ({ post }: PostProps) => {
           <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span>
         </span>
         {formattedDate}
+        <span className="ml-1">- {`${timeToRead.minutes} min read 📖`}</span>
       </time>
       <h2 className="text-base font-semibold text-zinc-800 dark:text-white">
         {post?.fields?.title}
