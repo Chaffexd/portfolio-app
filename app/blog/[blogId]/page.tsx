@@ -28,7 +28,7 @@ const PostDetailPage = ({ params }: { params: { blogId: string } }) => {
 
   return (
     <div className="mx-auto w-full max-w-7xl lg:px-8 mt-20">
-      <div className="mx-6 max-w-1xl lg:max-w-5xl">
+      <div className="mx-6 md:mx-36 max-w-1xl lg:max-w-5xl">
         <div className="xl:relative">
           <BlogDetailPage slug={blogId} />
         </div>
