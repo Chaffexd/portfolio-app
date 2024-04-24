@@ -47,3 +47,11 @@ export function formatDate(ogPostDate: string) {
 
   return `${month} ${dayWithSuffix}, ${year}`;
 }
+
+export const getAllProjects = async () => {
+  const projects = await client.getEntries({
+    content_type: "projectsPage"
+  });
+
+  return projects;
+};

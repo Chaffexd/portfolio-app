@@ -17,7 +17,6 @@ const BlogDetailPage = async ({ slug }: SlugProps) => {
 
   // @ts-expect-error
   const text = documentToPlainTextString(content);
-  console.log("TEXT =", text)
   const timeToRead = readingTime(text, 250);
 
   // convert date to readable format I want
