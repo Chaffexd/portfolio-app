@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { LinkIcon } from "@heroicons/react/24/outline";
 
 type ProjectProps = {
   projectData: {
@@ -38,17 +39,29 @@ const Project = ({ projectData }: ProjectProps) => {
       </div>
       <div className="w-3/4">
         <h1 className="font-bold text-xl mb-4">{projectData.title}</h1>
-        <Link href={projectData.deployedSiteLink} target="_blank" className="font-semibold hover:underline">
+        <Link
+          href={projectData.deployedSiteLink}
+          target="_blank"
+          className="font-semibold hover:underline flex items-center"
+        >
+          <LinkIcon width={16} height={16} className="mr-1" />
           Live Site
         </Link>
-        <br />
-        <Link href={projectData.gitHubRepository} target="_blank" className="font-semibold hover:underline">
+        <Link
+          href={projectData.gitHubRepository}
+          target="_blank"
+          className="font-semibold hover:underline flex items-center"
+        >
+          <LinkIcon width={16} height={16} className="mr-1" />
           GitHub Repository
         </Link>
         <p className="mt-4">{projectData.projectDescription}</p>
         <div className="flex mt-4 flex-wrap">
           {projectData.technologiesUsed.map((item, index) => (
-            <span key={index} className="mr-2 mt-2 flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
+            <span
+              key={index}
+              className="mr-2 mt-2 flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+            >
               {item}
             </span>
           ))}

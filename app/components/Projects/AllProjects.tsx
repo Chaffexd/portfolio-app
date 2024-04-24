@@ -1,5 +1,4 @@
 import Project from "./Project";
-import { projectData } from "./projectsList";
 
 type ProjectsProps = {
   allProjects: {
