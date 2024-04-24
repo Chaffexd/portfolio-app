@@ -30,7 +30,7 @@ const Project = ({ projectData }: ProjectProps) => {
     <article className="rounded p-4 md:p-8 h-fit flex flex-col lg:flex-row gap-8 dark:bg-zinc-800 bg-gray-50 w-full">
       <div className="1/4">
         <Image
-          src={`https://${projectData.image.fields.file.url}`}
+          src={`https:${projectData.image.fields.file.url}`}
           alt={description}
           width={200}
           height={100}
