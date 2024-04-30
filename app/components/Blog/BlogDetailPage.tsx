@@ -39,17 +39,19 @@ const BlogDetailPage = async ({ slug }: SlugProps) => {
         // @ts-expect-error: ignore because it attempts to infer
         documentToReactComponents(content, richTextOptions)}
       <p className="mt-12">Technology used: </p>
+      <div className="flex flex-wrap">
       {
         // @ts-expect-error: ignore because it attempts to infer
         tags?.map((tag, idx) => (
           <span
             key={idx}
-            className="inline-block mt-2 mr-4 rounded bg-sky-400 p-2 text-white font-bold"
+            className="mr-2 mt-2 flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
           >
             {tag as string}
           </span>
         ))
       }
+      </div>
     </section>
   );
 };

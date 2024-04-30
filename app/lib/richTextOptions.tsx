@@ -7,22 +7,22 @@ import Link from "next/link";
 export const richTextOptions = {
   renderNode: {
     [BLOCKS.HEADING_1]: (node: any, children: any) => {
-      return <h1 className="font-bold text-5xl mb-4 dark:text-white">{children}</h1>;
+      return <h1 className="font-bold text-5xl my-4 dark:text-white">{children}</h1>;
     },
     [BLOCKS.HEADING_2]: (node: any, children: any) => {
-      return <h2 className="font-bold text-2xl mb-4 dark:text-white">{children}</h2>;
+      return <h2 className="font-bold text-2xl my-4 dark:text-white">{children}</h2>;
     },
     [BLOCKS.HEADING_3]: (node: any, children: any) => {
-      return <h3 className="font-bold text-xl mb-4 dark:text-white">{children}</h3>;
+      return <h3 className="font-bold text-xl my-4 dark:text-white">{children}</h3>;
     },
     [BLOCKS.HEADING_4]: (node: any, children: any) => {
-      return <h4 className="font-bold text-lg mb-4 dark:text-white">{children}</h4>;
+      return <h4 className="font-bold text-lg my-4 dark:text-white">{children}</h4>;
     },
     [BLOCKS.HEADING_5]: (node: any, children: any) => {
-      return <h5 className="font-bold text-lg mb-4 dark:text-white">{children}</h5>;
+      return <h5 className="font-bold text-lg my-4 dark:text-white">{children}</h5>;
     },
     [BLOCKS.HEADING_6]: (node: any, children: any) => {
-      return <h6 className="font-bold text-lg mb-4 dark:text-white">{children}</h6>;
+      return <h6 className="font-bold text-lg my-4 dark:text-white">{children}</h6>;
     },
     [BLOCKS.UL_LIST]: (node: any, children: any) => {
       return <ul className="list-disc dark:text-slate-200 list-inside">{children}</ul>;
