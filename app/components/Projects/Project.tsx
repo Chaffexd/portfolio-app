@@ -39,22 +39,27 @@ const Project = ({ projectData }: ProjectProps) => {
       </div>
       <div className="w-3/4">
         <h1 className="font-bold text-xl mb-4">{projectData.title}</h1>
-        <Link
-          href={projectData.deployedSiteLink}
-          target="_blank"
-          className="font-semibold hover:underline flex items-center"
-        >
-          <LinkIcon width={16} height={16} className="mr-1" />
-          Live Site
-        </Link>
-        <Link
-          href={projectData.gitHubRepository}
-          target="_blank"
-          className="font-semibold hover:underline flex items-center"
-        >
-          <LinkIcon width={16} height={16} className="mr-1" />
-          GitHub Repository
-        </Link>
+        <div className="flex items-center">
+          <Link
+            href={projectData.deployedSiteLink}
+            target="_blank"
+            className="font-semibold hover:underline flex items-center w-38"
+          >
+            <LinkIcon width={16} height={16} className="mr-1" />
+            Live Site
+          </Link>
+        </div>
+        <div className="flex items-center">
+          <Link
+            href={projectData.gitHubRepository}
+            target="_blank"
+            className="font-semibold hover:underline flex items-center"
+          >
+            <LinkIcon width={16} height={16} className="mr-1" />
+            GitHub Repository
+          </Link>
+        </div>
+
         <p className="mt-4">{projectData.projectDescription}</p>
         <div className="flex mt-4 flex-wrap">
           {projectData.technologiesUsed.map((item, index) => (
