@@ -59,7 +59,6 @@ const Project = ({ projectData }: ProjectProps) => {
             GitHub Repository
           </Link>
         </div>
-
         <p className="mt-4">{projectData.projectDescription}</p>
         <div className="flex mt-4 flex-wrap">
           {projectData.technologiesUsed.map((item, index) => (
@@ -77,29 +76,3 @@ const Project = ({ projectData }: ProjectProps) => {
 };
 
 export default Project;
-/* 
-<Image
-src={projectData.imageSource}
-alt={projectData.title}
-width={500}
-height={400}
-className="rounded h-auto"
-/>
-<div className="text-center flex flex-col items-center">
-<p className="font-bold text-xl mt-4">{projectData.title}</p>
-<Link
-  href={projectData.repo}
-  target="_blank"
-  className="w-12 font-semibold hover:underline"
->
-  Repo
-</Link>
-<Link
-  href={projectData.link}
-  target="_blank"
-  className="w-20 font-semibold hover:underline"
->
-  Live Site
-</Link>
-<p>{projectData.excerpt}</p>
-</div> */

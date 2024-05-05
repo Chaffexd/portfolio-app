@@ -46,7 +46,7 @@ const AboutPage = () => {
                 >
                   <Image
                     src="/images/aws-certified-cloud-practitioner.png"
-                    alt="AWS Cert"
+                    alt="AWS Certification"
                     height={180}
                     width={180}
                   />
@@ -59,7 +59,7 @@ const AboutPage = () => {
                 >
                   <Image
                     src="/images/contentful-certified-professional.png"
-                    alt="AWS Cert"
+                    alt="Contentful Certification"
                     height={180}
                     width={180}
                   />
