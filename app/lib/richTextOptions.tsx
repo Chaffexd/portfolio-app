@@ -31,7 +31,7 @@ export const richTextOptions = {
       return <li className="my-4">{children}</li>;
     },
     [BLOCKS.OL_LIST]: (node: any, children: any) => {
-      return <li className="my-4">{children}</li>;
+      return <ol className="my-4 dark:text-slate-200 list-inside">{children}</ol>;
     },
     [BLOCKS.PARAGRAPH]: (node: any, children: any) => {
       return <p className="mb-2 text-slate-700 dark:text-slate-200 inline">{children}</p>;
