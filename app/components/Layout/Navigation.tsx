@@ -3,7 +3,7 @@ import ThemeSwitch from "../ThemeSwitch";
 
 const Navigation = () => {
   return (
-    <header className="max-sm:mx-0 flex justify-center md:mx-48">
+    <header className="hidden max-sm:mx-0 md:flex justify-center md:mx-48">
       <nav className="flex mt-6 items-center justify-between min-w-full dark:text-white">
         <div>
           <Link href={"/"} className="hover:text-teal-500" aria-label="Home">

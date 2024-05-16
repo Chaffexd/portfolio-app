@@ -6,8 +6,8 @@ import BlogPosts from "../Blog/BlogPosts";
 
 const Hero = () => {
   return (
-    <section className="">
-      <div className="max-sm:w-full max-sm:mx-2 max-w-3xl mt-16 ml-48 md:pr-36">
+    <section>
+      <div className="max-sm:w-full max-sm:mx-2 max-w-3xl mt-4 sm:mt-16 ml-48 md:pr-36">
         <Link href={"/"} className="block w-1/6 mb-4" aria-label="Home">
           <Image
             className="rounded-full object-cover h-16 w-16"
@@ -17,10 +17,10 @@ const Hero = () => {
             alt="A photo of me, Shane"
           />
         </Link>
-        <h1 className="mb-4 text-4xl text-zinc-800 font-bold dark:text-zinc-100">
+        <h1 className="mb-4 text-4xl text-zinc-800 font-bold dark:text-zinc-100 px-2 sm:px-0">
           Software Developer, Frontend Engineer, and Poodle enthusiast...
         </h1>
-        <p className="mt-6 text-zinc-600 text-base dark:text-zinc-400">
+        <p className="mt-6 text-zinc-600 text-base dark:text-zinc-400 px-2 sm:px-0">
           I&apos;m Shane, a Senior Technical Account Manager and developer based in
           London, UK. I enjoy fixing things that are broken and creating from
           scratch.
