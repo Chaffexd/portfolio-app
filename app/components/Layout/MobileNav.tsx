@@ -38,7 +38,7 @@ const navLinks = [
 
 const MobileNav = () => {
   const path = usePathname();
-  console.log("Paht = ", path);
+  
   return (
     <nav
       className={`sm:hidden w-full flex justify-end pr-2 ${
