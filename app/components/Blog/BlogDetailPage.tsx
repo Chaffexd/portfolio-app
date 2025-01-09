@@ -29,7 +29,7 @@ const BlogDetailPage = async ({ slug }: SlugProps) => {
         author={author}
         timeToRead={timeToRead}
       />
-      <Link href={"/blog"}>
+      <Link href={"/blog"} className="inline-block">
         <ArrowLeftIcon className="h-6 w-6 text-slate-600 mb-4 dark:text-slate-200" />
       </Link>
       <time className="mb-2 block text-zinc-400 dark:text-slate-200">
