@@ -27,13 +27,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: "https://www.chaffe.dev/blog",
       lastModified: new Date().toISOString(),
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 0.9,
     },
     {
       url: "https://www.chaffe.dev/projects",
       lastModified: new Date().toISOString(),
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 0.7,
     },
     ...posts
